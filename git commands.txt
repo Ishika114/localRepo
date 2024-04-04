@@ -1,0 +1,349 @@
+--------------check git version-------------------
+urpatida@LIN-PF264LFY MINGW64 ~
+>>>>>>>>>>> $ git --version
+git version 2.44.0.windows.1
+
+====================================
+-------give the username---------------
+urpatida@LIN-PF264LFY MINGW64 ~
+>>>>>>>>>>> $ git config --global user.name "urwashi015"
+
+====================================
+-------give the email id---------------
+urpatida@LIN-PF264LFY MINGW64 ~
+>>>>>>>>>>> $ git config --global user.email "urwashi015patidar@gmail.com"
+
+====================================
+
+---------give the list of few moments in last fev days--------------
+urpatida@LIN-PF264LFY MINGW64 ~
+>>>>>>>>>>> $ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=urwashi015
+user.email=urwashi015patidar@gmail.com
+
+========================================
+-----------make new folder/ directory inside current location---------------
+urpatida@LIN-PF264LFY MINGW64 ~
+>>>>>>>>>>> $ mkdir Urwashi
+
+===============
+------------go to that directory----------------------
+urpatida@LIN-PF264LFY MINGW64 ~
+>>>>>>>>>>> $ cd Urwashi
+
+==========================
+------------copy a project from git hub to current folder---------------
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi
+>>>>>>>>>>> $ git clone https://github.com/urwashi150/sellproject.git
+Cloning into 'sellproject'...
+remote: Enumerating objects: 12, done.
+remote: Counting objects: 100% (12/12), done.
+remote: Compressing objects: 100% (9/9), done.
+remote: Total 12 (delta 1), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (12/12), 11.13 KiB | 5.56 MiB/s, done.
+Resolving deltas: 100% (1/1), done.
+
+============================
+-----------open the project-----------------
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi
+>>>>>>>>>>> $ cd sellproject
+
+
+================================
+
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi/sellproject (main)
+>>>>>>>>>>> $ ls
+README.md  dominos.xlsx  index.html
+
+================================
+
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi/sellproject (main)
+>>>>>>>>>>> $ ls -a
+./  ../  .git/  README.md  dominos.xlsx  index.html
+
+================================
+
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi/sellproject (main)
+>>>>>>>>>>> $ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+================================
+
+
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi/sellproject (main)
+>>>>>>>>>>> $ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+================================
+
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi/sellproject (main)
+>>>>>>>>>>> $ git add README.md
+
+================================
+
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi/sellproject (main)
+>>>>>>>>>>> $ git commit -m "1st update"
+[main 01dce27] 1st update
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+================================
+
+--------checking the status------------
+
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi/sellproject (main)
+>>>>>>>>>>> $ git status 
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+================================ 
+add two files in local folder  excel.xlsx, hello.txt
+================================ 
+
+--------checking the status------------
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi/sellproject (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        excel.xlsx
+        hello.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+================================
+-------adding more than one files when they are updated-----------
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi/sellproject (main)
+$ git add .
+
+================================
+-------adding more than one files when they are updated-----------
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi/sellproject (main)
+$ git add --all
+
+================================
+--------checking the status------------
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi/sellproject (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   excel.xlsx
+        new file:   hello.txt
+
+================================
+
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi/sellproject (main)
+$ git commit -m "2nd updte"
+[main 7064ef6] 2nd updte
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 excel.xlsx
+ create mode 100644 hello.txt
+
+================================
+
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi/sellproject (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+==============================================
+
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi/sellproject (main)
+$ git push origin main
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 5.68 KiB | 2.84 MiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/urwashi150/sellproject.git
+   ad60d2c..7064ef6  main -> main
+
+==============================================
+
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi/sellproject (main)
+$ cd ..
+
+==============================================
+
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi
+$ mkdir localRepo
+
+==============================================
+
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi
+$ cd localRepo
+
+==============================================
+
+
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi
+$ mkdir Repolocal
+
+==============================================
+
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi
+$ cd Repolocal
+
+==============================================
+
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi/Repolocal
+$ ls -a
+./  ../
+
+==============================================
+
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi/Repolocal
+$ git init
+Initialized empty Git repository in C:/Users/URPATIDA/Urwashi/Repolocal/.git/
+
+==============================================
+
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi/Repolocal (master)
+$ ls -a
+./  ../  .git/
+
+==============================================
+
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi/Repolocal (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+==============================================
+
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi/Repolocal (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        main.xlsx
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+==============================================
+
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi/Repolocal (master)
+$ git add .
+
+==============================================
+
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi/Repolocal (master)
+$ git commit -m "update1"
+[master (root-commit) 729c004] update1
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 main.xlsx
+
+==============================================
+
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi/Repolocal (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+==============================================
+
+
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi/Repolocal (master)
+$ git remote add origin https://github.com/urwashi150/Repolocal.git
+
+==============================================
+
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi/Repolocal (master)
+$ git remote -v
+origin  https://github.com/urwashi150/Repolocal.git (fetch)
+origin  https://github.com/urwashi150/Repolocal.git (push)
+==============================================
+
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi/Repolocal (master)
+$ git branch -M main
+==============================================
+---------------using -u to not write origin main everytime ,just write git push---------------------
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi/Repolocal (main)
+$ git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 5.32 KiB | 2.66 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/urwashi150/Repolocal.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+==============================================
+
+
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi/Repolocal (main)
+$ git branch
+* main
+
+
+==============================================
+
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi/Repolocal (main)
+$ git branch mybranch
+
+==============================================
+
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi/Repolocal (main)
+$ git checkout mybranch
+Switched to branch 'mybranch'
+
+==============================================
+
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi/Repolocal (mybranch)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+
+==============================================
+
+urpatida@LIN-PF264LFY MINGW64 ~/Urwashi/Repolocal (main)
+$
+
